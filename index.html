@@ -1,13 +1,222 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Gntics - Home
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+
+  <div class="page one">
+    <div class="grid wrap">
+      <div class="unit two-fifths">
+        <div class="profile-pic">
+          <img src=" http://www.gravatar.com/avatar/9b7447135ad4f627d675aee919a06bfc
+?s=150" alt="Gntics picture">
+        </div>
+      </div>
+      <div class="unit three-fifths">
+        <p class="intro">
+          Hi, I'm Alex. I'm a full stack software engineer, and I live in Montréal. I create web and mobile apps.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="trnstn">
+    <div class="grid wrap">
+      <ul>
+        <li class="unit two-fifths">-----------------</li>
+        <li class="unit one-fifth">
+          <div class="icon">
+            <i class="fa fa-chevron-circle-down fa-5x"></i>
+          </div>
+        </li>
+        <li class="unit two-fifths">-----------------</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page two">
+    <div class="grid wrap">
+      <div class="unit whole">
+        <div id="quote" class="important">
+          <span>-</span> Work hard in silence, Let success be your noise <span>-</span>
+        </div>
+      </div>
+    </div>
+    <div class="grid wrap">
+      <div class="unit whole">
+        <h1>I believe that...</h1>
+        <div id="motivationals">
+          <div class="grid wrap">
+            <div class="unit half left">
+              great ideas
+            </div>
+            <div class="unit half right">
+              quality
+            </div>
+          </div>
+          <div class="grid wrap">
+            <div class="unit half left">
+              motivation
+            </div>
+            <div class="unit half right">
+              ownership
+            </div>
+          </div>
+          <div class="grid wrap">
+            <div class="unit half left">
+              curiousity
+            </div>
+            <div class="unit half right">
+              & being humble
+            </div>
+          </div>
+        </div>
+        <h1>are keys to success.</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="trnstn">
+    <div class="grid wrap">
+      <ul>
+        <li class="unit two-fifths">-----------------</li>
+        <li class="unit one-fifth">
+          <div class="icon">
+            <i class="fa fa-chevron-circle-down fa-5x"></i>
+          </div>
+        </li>
+        <li class="unit two-fifths">-----------------</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page three">
+    <div class="grid wrap">
+      <div class="unit whole">
+        <h1>So I'm focused on...</h1>
+        <div id="focus-points">
+          <p>
+            <ul>
+              <li class="left">build beautiful, stable apps</li>
+              <li class="right">provide good user experience</li>
+              <li class="left">write clean code</li>
+              <li class="right">learn new technologies</li>
+              <li class="left">learn from others</li>
+              <li class="right">be a team player</li>
+              <li class="left">be product oriented</li>
+              <li class="right">& details</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trnstn">
+    <div class="grid wrap">
+      <ul>
+        <li class="unit two-fifths">-----------------</li>
+        <li class="unit one-fifth">
+          <div class="icon">
+            <i class="fa fa-chevron-circle-down fa-5x"></i>
+          </div>
+        </li>
+        <li class="unit two-fifths">-----------------</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page fourth">
+    <div class="grid wrap">
+      <div class="unit whole">
+        <h1 class="important">And I work with...</h1>
+        <ul id="technos">
+          <li>
+            <div class="logo">
+              <a href="https://www.ruby-lang.org/en/">
+                <img id="ruby" title="Ruby" src="{% asset_path ruby.png %}" alt="ruby_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://rubyonrails.org/">
+                <img id="rails" title="Rails" src="{% asset_path rails.png %}" alt="rails_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://www.postgresql.org/">
+                <img id="postgres" title="Postgres" src="{% asset_path postgresql.png %}" alt="postgres_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://en.wikipedia.org/wiki/Agile_software_development">
+                <span id="agile"><b>Agile methodology</b></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://rspec.info/">
+                <span id="rspec"><b>RSpec</b></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://getbootstrap.com/">
+                <img id="bootstrap" title="Bootstrap" src="{% asset_path bootstrap.png %}" alt="bootstrap_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://git-scm.com/">
+                <img id="git" title="Git" src="{% asset_path git.png %}" alt="git_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="https://github.com/">
+                <img id="github" title="GitHub" src="{% asset_path github.png %}" alt="github_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://jenkins-ci.org/">
+                <img id="jenkins" title="Jenkins" src="{% asset_path jenkins.png %}" alt="jenkins_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://sass-lang.com/">
+                <img id="sass" title="Sass" src="{% asset_path sass.png %}" alt="sass_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <a href="http://coffeescript.org/">
+                <img id="coffeescript" title="CoffeeScript" src="{% asset_path coffeescript.png %}" alt="coffeescript_logo">
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="logo">
+              <span><b>...</b></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </div>

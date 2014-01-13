@@ -1,3 +1,14 @@
-name: Your New Jekyll Site
+name: Gntics
 markdown: redcarpet
 pygments: true
+exclude: ["Guardfile", "Gemfile", "Gemfile.lock", "README.md"]
+assets:
+  dirname: assets
+  baseurl: /assets/
+  gzip: false
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+  js_compressor: uglifier
+  css_compressor: sass
