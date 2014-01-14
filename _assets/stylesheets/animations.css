@@ -1,4 +1,13 @@
+/* override animate.css duration */
 .animated{
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+/* header animation */
+.animated-header{
   -webkit-animation-duration:.5s;
   -moz-animation-duration:.5s;
   -o-animation-duration:.5s;
@@ -8,6 +17,7 @@
   -o-animation-fill-mode:both;
   animation-fill-mode:both;
 }
+
 
 @-webkit-keyframes slideDown{
   0%{ -webkit-transform:translateY(-5em); }
@@ -29,7 +39,7 @@
   100%{ transform:translateY(0); }
 }
 
-.animated.slideDown{
+.animated-header.slideDown{
   -webkit-animation-name:slideDown;
   -moz-animation-name:slideDown;
   -o-animation-name:slideDown;
@@ -56,7 +66,7 @@
   100%{ transform:translateY(-5em); }
 }
 
-.animated.slideUp{
+.animated-header.slideUp{
   -webkit-animation-name:slideUp;
   -moz-animation-name:slideUp;
   -o-animation-name:slideUp;

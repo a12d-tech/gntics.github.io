@@ -29,7 +29,7 @@ $(function() {
    "tolerance": 5,
     "offset": 205,
     "classes": {
-      "initial": "animated",
+      "initial": "animated-header",
       "pinned": "slideDown",
       "unpinned": "slideUp"
     }
@@ -64,7 +64,7 @@ $(function() {
   function smoothScrollTo(position){
     $("html, body").animate(
       { scrollTop: position - 20 },
-      { duration: 500 }
+      { duration: 750 }
     );
   };
 
