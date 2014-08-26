@@ -1,0 +1,19 @@
+---
+layout: default
+title: Gntics - Home
+---
+
+<div class="grid wrap">
+  <h1>Blog posts</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <i class="fa fa-angle-right"></i>
+        <span class="">{{ post.date | date_to_string }}</span>
+        <a href="{{ post.url }}">
+          <span class="">{{ post.title }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
