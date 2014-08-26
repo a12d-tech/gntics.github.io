@@ -1,9 +1,17 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
+<div class="grid wrap">
+  <h2>{{ page.title }}</h2>
+  <p class="meta">{{ page.date | date_to_string }}</p>
+
+  <div class="post">
+  {{ content }}
+  </div>
+
+  <a href="{{ site.url }}/blog/">
+    <i class="fa fa-angle-double-left"></i>
+    Return to blog posts
+  </a>
 </div>
