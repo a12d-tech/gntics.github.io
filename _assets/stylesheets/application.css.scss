@@ -81,6 +81,7 @@ section#content_wrapper{
   h1{
     font-family: $font-stack; 
     font-size: 2em;
+    font-weight: $fweight-normal;
   }
   // css tricky footer
   min-height: 100%;

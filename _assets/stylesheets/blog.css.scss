@@ -1,0 +1,43 @@
+@import "global";
+
+div#blog-posts{
+  span{
+    margin-right: 5px;
+  }
+}
+
+div#side-projects{
+  ul{
+    li.project{
+      margin-bottom: 5px;
+      span{
+        font-size: 13px;
+        font-weight: normal;
+        font-style: italic;
+        margin-left: 15px;
+      }
+      .github-code{
+
+      }
+      .mock-up{
+        color: $project-mock-up-color;
+      }
+      .active{
+        color: $project-active-color;
+      }
+      .inactive{
+        color: $project-inactive-color;
+      }
+      p.desc{
+        margin: 0 !important;
+      }
+      a.title{
+        color: $first-color;
+        font-weight: $fweight-normal;
+      }
+      a.code{
+        color: $grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+- name: Personal website
+  desc: My personal website using jekyll
+  status: active
+  url: '#'
+  code: https://github.com/gntics/gntics.github.io/tree/develop
+- name: Ember-weather
+  desc: Small project to get started with Ember.js
+  status: mock-up
+  url: http://gntics.github.io/ember-weather/
+  code: https://github.com/gntics/ember-weather/tree/develop

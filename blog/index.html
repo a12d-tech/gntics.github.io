@@ -4,16 +4,40 @@ title: Gntics - Home
 ---
 
 <div class="grid wrap">
-  <h1>< Blog posts /></h1>
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <i class="fa fa-angle-right"></i>
-        <span class="">{{ post.date | date_to_string }}</span>
-        <a href="{{ post.url }}">
-          <span class="">{{ post.title }}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  <div id="blog-posts"class="unit half">
+    <h1><i class="fa fa-paperclip"></i> Blog posts</h1>
+    <ul>
+      {% for post in site.posts %}
+        <li>
+          <i class="fa fa-terminal"></i>
+          <span class="">{{ post.date | date_to_string }}</span>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="side-projects" class="unit half">
+    <h1><i class="fa fa-cubes"></i> Side projects</h1>
+    <ul>
+      {% for project in site.data.projects %}
+        <li class="project">
+          <i class="fa fa-terminal"></i>
+          <a class="title" href="{{ project.url }}" target="_blank">
+            {{ project.name }}
+          </a>
+          <span class="{{ project.status }}"><i class="fa fa-cube"></i> {{ project.status }}</span>
+          <span class="github-code">
+            <a class="code" href="{{ project.code }}" target="_blank">
+              <i class="fa fa-code"></i>code
+            </a>
+          </span>
+          <p class="desc">
+            {{ project.desc }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
