@@ -77,17 +77,27 @@ header{
 }
 
 /* content */
-section#content{
-  margin-top: 120px;
-  margin-bottom: 25px;
-
+section#content_wrapper{
   h1{
     font-family: $font-stack; 
     font-size: 2em;
   }
+  // css tricky footer
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -75px;
+
+  div#content{
+    padding-top: 120px;
+  }
 }
 
 /* footer */
+footer, .push{
+  height: 73px;
+}
+
 footer{
   color: $footer-text-color;
   background-color: $footer-background-color;
