@@ -2,7 +2,7 @@ name: Gntics
 markdown: redcarpet
 pygments: true
 gems: ["jekyll-assets"]
-exclude: ["Guardfile", "Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["Guardfile", "Gemfile", "Gemfile.lock", "README.md", "todo"]
 assets:
   dirname: assets
   baseurl: /assets/
