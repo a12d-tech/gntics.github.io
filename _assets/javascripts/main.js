@@ -1,26 +1,17 @@
 $(function() {
   /* Add animations on elements */
-  $('.one .intro').addClass('animated fadeInRight');
+  $('.one .profile-pic').addClass('animated tada');
+  $('#logo').addClass('animated bounceInLeft');
+  $('ul.menu-icons-container li').addClass('animated bounceInDown');
 
   /* Add animations on elements when scrolling */
   $(window).scroll(function(event) {
     // no animations for small screens
     if ($(window).width() > 568){
-
-      handleRightLeftAnimation("#motivationals .unit");
-      handleRightLeftAnimation("#focus-points ul li");
-
-      $("#technos .logo").each(function(i, el) {
-        var el = $(el);
-        if (el.visible(true)) {
-          el.addClass("animated fadeInUp"); 
-        }
-        else{
-          if (el.hasClass("animated")) {
-            el.removeClass("animated fadeInUp");
-          }
-        }
-      });
+      handleAnimationWhenVisible("#motivationals .unit", "fadeInLeftRight");
+      handleAnimationWhenVisible("#focus-points ul li", "fadeInLeftRight");
+      handleAnimationWhenVisible("#technos .logo", "fadeInUp");
+      handleAnimationWhenVisible("div.trnstn ul li.unit", "fadeInLeftRight");
     }
   });
 
@@ -68,28 +59,27 @@ $(function() {
     );
   };
 
-  /* animation util to handle fade in left/right */
-  function handleRightLeftAnimation(selector){
+  function handleAnimationWhenVisible(selector,animation) {
     $(selector).each(function(i, el) {
       var el = $(el);
       if (el.visible(true)) {
-        if (el.hasClass("left")) {
-          el.addClass("animated fadeInLeft"); 
+        el.addClass("animated");
+        if (animation === 'fadeInUp') {
+          el.addClass("fadeInUp");
         }
-        if (el.hasClass("right")) {
-          el.addClass("animated fadeInRight"); 
-        }
-      }
-      else{
-        if (el.hasClass("animated")) {
-          if (el.hasClass("fadeInLeft")) {
-            el.removeClass("animated fadeInLeft"); 
+        else if (animation === 'fadeInLeftRight') {
+          if (el.hasClass("left")) {
+            el.addClass("fadeInLeft");
           }
-          if (el.hasClass("fadeInRight")) {
-            el.removeClass("animated fadeInRight"); 
-          } 
+          if (el.hasClass("right")) {
+            el.addClass("fadeInRight");
+          }
+          if (el.hasClass("bnce")) {
+            el.addClass("bounceIn");
+          }
         }
       }
     });
-  };
+  }
+
 });
