@@ -1,0 +1,48 @@
+body#resume{
+  margin: 10px;
+  background-color: #1C1C1C;
+
+  p{
+    margin: 0;
+    color: white;
+  }
+
+  section#content{
+    i.arrow{
+      color: #01DF01;
+      margin-right: 10px
+    }
+    span{
+      font-weight: 400;
+    }
+    span.elt{
+      margin-right: 10px;
+    }
+    span.name{
+      color: #00FFFF;
+    }
+    span.git{
+      color: #2E2EFE;
+    }
+    span.branch{
+      color: #FE2E2E;
+    }
+    div#text-wrapper{
+      p#intro{
+
+      }
+    }
+    div#input-wrapper{
+      input#cmd{
+        font-size: 14px;
+        color: white;
+        width: 80%;
+        border: none;
+        background-color: transparent;
+      }
+      input#cmd:focus{
+        outline: none;
+      }
+    }
+  }
+}

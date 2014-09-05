@@ -3,3 +3,4 @@
 //= require 'vendor/headroom/jQuery.headroom'
 //= require 'vendor/visible/jquery.visible'
 //= require main
+//= require resume
