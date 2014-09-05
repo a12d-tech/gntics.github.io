@@ -1,21 +1,23 @@
 $(function() {
 
   var el = document.getElementById('cmd');
-  el.focus();
-  el.onblur = function () {
-      setTimeout(function () {
-          el.focus();
-      });
-  };
+  if (el) {
+    el.focus();
+    el.onblur = function () {
+        setTimeout(function () {
+            el.focus();
+        });
+    };
 
-  el.onkeypress = function(e){
-    if (!e) e = window.event;
-    var keyCode = e.keyCode || e.which;
-    if (keyCode == '13'){
-      process(el.value);
-      return false;
+    el.onkeypress = function(e){
+      if (!e) e = window.event;
+      var keyCode = e.keyCode || e.which;
+      if (keyCode == '13'){
+        process(el.value);
+        return false;
+      }
     }
-  }
+  };
 
   function process (cmd) {
     console.log(cmd);
