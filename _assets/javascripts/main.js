@@ -1,8 +1,25 @@
 $(function() {
+
   /* Add animations on elements */
-  $('.one .profile-pic').addClass('animated tada');
   $('#logo').addClass('animated bounceInLeft');
   $('ul.menu-icons-container li').addClass('animated bounceInDown');
+
+  $(".typing").typed({
+      strings: [
+        "Hi^500 I'm Axle",
+        "Hi I'm Alexandre, ^500 \n a software engineer",
+        "I create ^500 web, mobile apps ^500 \n and other stuff",
+        "Oh, ^200 by the way ^300 \n I'm available for hire."
+      ],
+      typeSpeed: 50,
+      //backDelay: 500, //500
+      callback: function(){ animateHome(); }
+  });
+
+  function animateHome () {
+    /* Add animations on elements */
+    $('.one .profile-pic').addClass('animated tada');
+  }
 
   /* Add animations on elements when scrolling */
   $(window).scroll(function(event) {

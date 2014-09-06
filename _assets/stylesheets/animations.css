@@ -10,36 +10,37 @@
 }
 
 #logo {
-  -webkit-animation-delay: 2.45s;
-  -moz-animation-delay: 2.45s;
-  -o-animation-delay: 2.45s;
-  animation-delay: 2.45s;
+  -webkit-animation-delay: 0.45s;
+  -moz-animation-delay: 0.45s;
+  -o-animation-delay: 0.45s;
+  animation-delay: 0.45s;
 }
 
 ul.menu-icons-container li:nth-child(1) {
-  -webkit-animation-delay: 2.5s;
-  -moz-animation-delay: 2.5s;
-  -o-animation-delay: 2.5s;
-  animation-delay: 2.5s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -o-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 ul.menu-icons-container li:nth-child(2) {
-  -webkit-animation-delay: 2.55s;
-  -moz-animation-delay: 2.55s;
-  -o-animation-delay: 2.55s;
-  animation-delay: 2.55s;
+  -webkit-animation-delay: 0.55s;
+  -moz-animation-delay: 0.55s;
+  -o-animation-delay: 0.55s;
+  animation-delay: 0.55s;
 }
 ul.menu-icons-container li:nth-child(3) {
-  -webkit-animation-delay: 2.6s;
-  -moz-animation-delay: 2.6s;
-  -o-animation-delay: 2.6s;
-  animation-delay: 2.6s;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
-.one .profile-pic {
+
+/*.one .profile-pic {
   -webkit-animation-delay: 3.5s;
   -moz-animation-delay: 3.5s;
   -o-animation-delay: 3.5s;
   animation-delay: 3.5s;
-}
+}*/
 
 div.trnstn ul li:nth-child(1), div.trnstn ul li:nth-child(2), div.trnstn ul li:nth-child(3) {
   -webkit-animation-delay: 1.5s;
@@ -48,49 +49,29 @@ div.trnstn ul li:nth-child(1), div.trnstn ul li:nth-child(2), div.trnstn ul li:n
   animation-delay: 1.5s;
 }
 
-
-
-/*.intro {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 0em;
-  height: 1.25em;
-  margin: .5em auto;
-  font-size: 2em;
-  line-height: 1.5em;
-  border-right: .125em solid #46beb2;
-  box-sizing: content-box;
-  -webkit-animation-name: blink-start, typing, blink-end;
-  -webkit-animation-duration: 1s, 1s, 1s;
-  -webkit-animation-timing-function: linear, steps(13, end), linear;
-  -webkit-animation-delay: 0s, 1s, 2s;
-  -webkit-animation-iteration-count: 1, 1, infinite;
-  -webkit-animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
+/* typed.js */
+.typed-cursor{
+    color: $second-color;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
 }
-
-.intro span {
-  display: block;
-  width: 6.5em;
-  height: 1.25em;
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-
-@-webkit-keyframes typing {
-  from { width: 0em; }
-  to   { width: 6.5em; }
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-
-@-webkit-keyframes blink-start {
-  from, to { border-color: #46beb2; }
-  50% { border-color: transparent; }
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-
-@-webkit-keyframes blink-end {
-  from, to { border-color: #46beb2; }
-  50% { border-color: transparent; }
-}
-*/
 
 /* override animate.css duration */
 .animated{
