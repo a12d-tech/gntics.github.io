@@ -1,0 +1,73 @@
+@import 'global';
+
+body#sandbox{
+  section#content{
+    padding-top: 120px;
+    //padding-left: 120px;
+    div#shape-wrapper{
+      //margin-left: 50px;
+      margin: 0 auto;
+      height: 300px;
+      width: 900px;
+      div#left{
+        @include box-sizing(border-box);
+        padding: 0px;
+        height: 300px;
+
+        display: block;
+        overflow: hidden;
+        width: 0px;
+        ul{
+          width: 850px;
+          margin: 25px; 
+          // height: 100px;
+          // display: block;
+
+          list-style-type: none;
+          li{
+            position: relative;
+            display: inline-block;
+            float: left;
+          }
+          .line{
+            border-top: 1px solid #807066;
+            height: 0px;
+            width: 150px;
+            margin-top: 78px;
+            z-index: 1;
+          }
+          .rect{
+            background-color: $fourth-color;
+            border: 1px solid $brown-light;
+            display: block;
+            @include rotate(45deg);
+          }
+          .one, .five{
+            margin-top: 45px;
+            width: 65px;
+            height: 65px;
+            z-index: 10;
+          }
+          .two, .four{
+            width: 85px;
+            height: 85px;
+            z-index: 20;
+            //margin-top: 35px;
+            margin-top: 72px;
+          }
+          .three{
+            width: 200px;
+            height: 200px;
+            @include border-radius(100px);
+            border: 1px solid $brown-light;
+            overflow: hidden;
+            z-index: 50;
+            // margin-left: -20px;
+            // margin-right: -20px;
+          }
+        }
+      }
+    }
+
+  }
+}
