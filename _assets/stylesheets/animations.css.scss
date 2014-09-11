@@ -1,5 +1,19 @@
 @import "global";
 
+/* anim utils */
+.delay-1s{
+  @include anim-delay(1s);
+}
+
+.delay-2s{
+  @include anim-delay(2s);
+}
+
+.delay-3s{
+  @include anim-delay(3s);
+}
+
+/* sandbox anim */
 @-webkit-keyframes expand {
   0% { width: 0px; }
   100% { width: 900px; }
@@ -21,66 +35,34 @@
 }
 
 .expand {
-  -webkit-animation-name: expand;
-  -moz-animation-name: expand;
-  -o-animation-name: expand;
-  animation-name: expand;
-  -webkit-animation-iteration-count: 1;
-  -moz-animation-iteration-count: 1;
-  -o-animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-fill-mode:both;
-  -moz-animation-fill-mode:both;
-  -o-animation-fill-mode:both;
-  animation-fill-mode:both;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -o-animation-delay: 1s;
-  animation-delay: 1s;
+  @include anim-name(expand);
+  @include anim-it-count(1);
+  @include anim-f-mode(both);
+  @include anim-delay(1s);
 }
 
 .slow{
-  -webkit-animation-duration: 6s;
-  -moz-animation-duration: 6s;
-  -o-animation-duration: 6s;
-  animation-duration: 6s;
+  @include anim-dur(6s);
 }
 
+/* home anim */
 #motivationals .unit, #focus-points ul li, #technos .logo{
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-  -webkit-animation-duration: 0.8s;
-  -moz-animation-duration: 0.8s;
-  -o-animation-duration: 0.8s;
-  animation-duration: 0.8s;
+  @include anim-delay(0.5s);
+  @include anim-dur(0.8s);
 }
 
 #logo {
-  -webkit-animation-delay: 0.45s;
-  -moz-animation-delay: 0.45s;
-  -o-animation-delay: 0.45s;
-  animation-delay: 0.45s;
+  @include anim-delay(0.45s);
 }
 
 ul.menu-icons-container li:nth-child(1) {
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  @include anim-delay(0.5s);
 }
 ul.menu-icons-container li:nth-child(2) {
-  -webkit-animation-delay: 0.55s;
-  -moz-animation-delay: 0.55s;
-  -o-animation-delay: 0.55s;
-  animation-delay: 0.55s;
+  @include anim-delay(0.55s);
 }
 ul.menu-icons-container li:nth-child(3) {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
-  -o-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  @include anim-delay(0.6s);
 }
 
 /*.one .profile-pic {
@@ -91,10 +73,7 @@ ul.menu-icons-container li:nth-child(3) {
 }*/
 
 div.trnstn ul li:nth-child(1), div.trnstn ul li:nth-child(2), div.trnstn ul li:nth-child(3) {
-  -webkit-animation-delay: 1.5s;
-  -moz-animation-delay: 1.5s;
-  -o-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  @include anim-delay(1.5s);
 }
 
 /* typed.js */
@@ -124,22 +103,13 @@ div.trnstn ul li:nth-child(1), div.trnstn ul li:nth-child(2), div.trnstn ul li:n
 
 /* override animate.css duration */
 .animated{
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
+  @include anim-dur(1s);
 }
 
 /* header animation */
 .animated-header{
-  -webkit-animation-duration:.5s;
-  -moz-animation-duration:.5s;
-  -o-animation-duration:.5s;
-  animation-duration:.5s;
-  -webkit-animation-fill-mode:both;
-  -moz-animation-fill-mode:both;
-  -o-animation-fill-mode:both;
-  animation-fill-mode:both;
+  @include anim-dur(0.5s);
+  @include anim-f-mode(both);
 }
 
 
@@ -163,11 +133,9 @@ div.trnstn ul li:nth-child(1), div.trnstn ul li:nth-child(2), div.trnstn ul li:n
   100%{ transform:translateY(0); }
 }
 
-.animated-header.slideDown{
-  -webkit-animation-name:slideDown;
-  -moz-animation-name:slideDown;
-  -o-animation-name:slideDown;
-  animation-name:slideDown;
+// .animated-header.slideDown
+.slideDown{
+  @include anim-name(slideDown);
 }
 
 @-webkit-keyframes slideUp{
@@ -190,9 +158,7 @@ div.trnstn ul li:nth-child(1), div.trnstn ul li:nth-child(2), div.trnstn ul li:n
   100%{ transform:translateY(-5em); }
 }
 
-.animated-header.slideUp{
-  -webkit-animation-name:slideUp;
-  -moz-animation-name:slideUp;
-  -o-animation-name:slideUp;
-  animation-name:slideUp;
+// .animated-header.slideUp
+.slideUp{
+  @include anim-name(slideUp);
 }
