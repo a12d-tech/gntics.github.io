@@ -9,12 +9,17 @@
 #           you can make up to 5,000 requests per hour.
 
 require 'octokit'
+require 'faraday'
+require 'faraday/http_cache'
 
 module Jekyll
   class GithubApiV3 < Jekyll::Generator
 
     def generate site
       # print_message "Jekyll Github Api v3 plugin fetching datas..."
+
+      # setup caching to extend API rate limits
+      setup_caching
 
       @github_login = nil
       @github_user = nil
@@ -67,6 +72,15 @@ module Jekyll
       #          and Sawyer::Relation.get
       #          X Octokit.user(login).convert_key_to_s
       Octokit.user(login)
+    end
+
+    def setup_caching
+      stack = Faraday::RackBuilder.new do |builder|
+        builder.use Faraday::HttpCache
+        builder.use Octokit::Response::RaiseError
+        builder.adapter Faraday.default_adapter
+      end
+      Octokit.middleware = stack
     end
 
   end

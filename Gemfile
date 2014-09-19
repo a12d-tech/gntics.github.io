@@ -5,3 +5,4 @@ gem 'jekyll-assets'
 gem 'uglifier'
 gem 'sass'
 gem "octokit", "~> 3.0"
+gem 'faraday-http-cache'

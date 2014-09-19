@@ -13,6 +13,8 @@ GEM
     execjs (2.0.2)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    faraday-http-cache (0.4.2)
+      faraday (~> 0.8)
     fast-stemmer (1.0.2)
     ffi (1.9.3)
     formatador (0.2.4)
@@ -105,6 +107,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday-http-cache
   github-pages
   guard-jekyll
   jekyll-assets
