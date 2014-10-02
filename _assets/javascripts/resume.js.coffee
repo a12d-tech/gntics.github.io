@@ -58,7 +58,7 @@ $ ->
   displayHelpCmd = ->
     $('#text-wrapper').append("
             <p id='help' class='line'>
-              The most commonly used 'batman' commands are:<br/>
+              The most commonly used 'resume' commands are:<br/>
               <span class='cmd-use'>education</span><span class='cmd-desc'>Add file contents to the index</span><br/>
               <span class='cmd-use'>skills</span><span class='cmd-desc'>Add file contents to the index</span><br/>
               <span class='cmd-use'>projects</span><span class='cmd-desc'>Add file contents to the index</span><br/>
