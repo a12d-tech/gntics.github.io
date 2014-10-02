@@ -1,6 +1,7 @@
 name: Gntics
 markdown: redcarpet
 pygments: true
+permalink: /blog/:year/:month/:day/:title
 gems: ["jekyll-assets"]
 exclude: ["Guardfile", "Gemfile", "Gemfile.lock", "deploy_to_master.sh", "todo", "tmp.json"]
 assets:
