@@ -24,18 +24,18 @@ title: Gntics - Blog
       {% for project in site.data.github.user_projects %}
         <li class="project">
           <i class="fa fa-terminal"></i>
-          <a class="title" href="{{ project.homepage }}" target="_blank">
+          <a class="title" href="{{ project.html_url }}" target="_blank">
             {{ project.name }}
           </a>
           <!-- <span class="{{ project.status }}"><i class="fa fa-cube"></i> {{ project.status }}</span> -->
           <span class="starred">
             <i class="fa fa-star"></i>{{ project.stargazers_count }}
           </span>
-          <span class="github-code">
+          <!-- <span class="github-code">
             <a class="code" href="{{ project.html_url }}" target="_blank">
               <i class="fa fa-code"></i>code
             </a>
-          </span>
+          </span> -->
           <p class="desc">
             {{ project.description }}
           </p>
