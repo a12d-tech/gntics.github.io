@@ -6,5 +6,6 @@ gem 'uglifier'
 gem 'sass'
 gem 'coffee-script'
 gem 'font-awesome-sass'
+gem 'bootstrap-sass'
 gem "octokit", "~> 3.0"
 gem 'faraday-http-cache'
