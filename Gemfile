@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'github-pages'
+gem 'github-pages' #is linked to jekyll gem
 gem 'guard-jekyll'
 gem 'jekyll-assets'
 gem 'uglifier'
