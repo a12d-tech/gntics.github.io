@@ -5,5 +5,6 @@ gem 'jekyll-assets'
 gem 'uglifier'
 gem 'sass'
 gem 'coffee-script'
+gem 'font-awesome-sass'
 gem "octokit", "~> 3.0"
 gem 'faraday-http-cache'
