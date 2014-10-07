@@ -1,12 +1,14 @@
 @import "global";
 
 div#blog-posts{
+  margin-bottom: 2em;
   span{
     margin-right: 5px;
   }
 }
 
 div#side-projects{
+  margin-bottom: 2em;
   ul{
     li.project{
       margin-bottom: 5px;

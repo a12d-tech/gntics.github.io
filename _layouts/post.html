@@ -2,16 +2,23 @@
 layout: default
 ---
 
-<div class="grid wrap">
-  <h2>{{ page.title }}</h2>
-  <p class="meta">{{ page.date | date_to_string }}</p>
+<div id="post">
+  <div class="grid wrap">
+    <div class="unit whole">
+      <h2>{{ page.title }}</h2>
+      <p class="meta">{{ page.date | date_to_string }}</p>
 
-  <div class="post">
-  {{ content }}
+      <div class="post">
+      {{ content }}
+      </div>
+    </div>
   </div>
-
-  <a href="{{ site.url }}/blog/">
-    <i class="fa fa-angle-double-left"></i>
-    Return to blog posts
-  </a>
+  <div class="grid wrap">
+    <div class="unit whole">
+      <a href="{{ site.url }}/blog/">
+        <i class="fa fa-angle-double-left"></i>
+        Return to blog posts
+      </a>
+    </div>
+  </div>
 </div>
