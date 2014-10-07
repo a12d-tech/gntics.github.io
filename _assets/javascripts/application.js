@@ -4,3 +4,13 @@
 //= require 'vendor/visible/jquery.visible'
 //= require 'vendor/typed/typed'
 //= require resume
+
+$("header").headroom({
+  tolerance: 5,
+  offset: 205,
+  classes: {
+    initial: "animated-header",
+    pinned: "slideDown",
+    unpinned: "slideUp"
+  }
+});

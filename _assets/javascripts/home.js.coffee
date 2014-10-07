@@ -63,15 +63,6 @@ $ ->
       handleAnimationWhenVisible "div.trnstn ul li.unit", "fadeInLeftRight"
     return
 
-  # headroom plugin config
-  $("header").headroom
-    tolerance: 5
-    offset: 205
-    classes:
-      initial: "animated-header"
-      pinned: "slideDown"
-      unpinned: "slideUp"
-
   handleAnimationWhenVisible = (selector, animation) ->
     $(selector).each (i, el) ->
       el = $(el)
