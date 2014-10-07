@@ -8,18 +8,17 @@ div#home{
   div#quote{
     margin-bottom: 1em;
   }
-}
 
-@media screen and (max-width: 397px){
-  #quote{
-    span{
-      display: none;
+  @media screen and (max-width: 397px){
+    #quote{
+      span{
+        display: none;
+      }
     }
   }
 }
 
 .trnstn{
-  margin: 3em 0 3em 0;
   min-height: 7em;
   ul{
     li{
@@ -56,37 +55,36 @@ div#home{
   vertical-align: middle;
 }
 
-.one{
-  .profile-pic{
-    @include border-radius(75px);
-    height: 150px;
-    width: 150px;
-    border: 2px solid white;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
-  }
+.profile-pic{
+  @include border-radius(75px);
+  height: 150px;
+  width: 150px;
+  border: 2px solid white;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.two, .three, .four{
+  text-align: center;
 }
 
 .two{
-  text-align: center;
   #motivationals{
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     font-size: 2em;
   }
 }
 
 .three{
-  text-align: center;
   #focus-points{
     font-size: 2em;
   }
 }
 
-.fourth{
-  text-align: center;
-  margin-bottom: 4em;
+.four{
+  // margin-bottom: 4em;
   ul#technos{
     max-width: 37.5em;
     margin: 0 auto;

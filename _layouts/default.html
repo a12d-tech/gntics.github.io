@@ -64,5 +64,8 @@
     </footer>
 
     {% javascript application %}
+    {% if page.include_js_file %}
+      {{ page.include_js_file | javascript }}
+    {% endif %}
   </body>
 </html>
