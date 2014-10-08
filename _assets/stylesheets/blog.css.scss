@@ -11,15 +11,24 @@ div#side-projects{
   margin-bottom: 2em;
   ul{
     li.project{
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       span{
-        font-size: 13px;
         font-weight: normal;
-        font-style: italic;
-        margin-left: 15px;
-      }
-      .starred{
-        font-style: normal;
+        &.title{
+          color: $first-color;
+          font-weight: $fweight-normal;
+        }
+        &.link{
+          font-size: 13px;
+          //font-style: italic;
+          margin-right: 15px;
+        }
+        &.starred{
+          font-size: 13px;
+        }
+        a, a:visited, a:hover{
+          color: $grey;
+        }
       }
       .github-code{
 
@@ -33,14 +42,11 @@ div#side-projects{
       .inactive{
         color: $project-inactive-color;
       }
-      p.desc{
-        margin: 0 !important;
+      .desc{
+        margin: 0;
+        padding-left: 20px;
       }
-      a.title{
-        color: $first-color;
-        font-weight: $fweight-normal;
-      }
-      a.code{
+      .code{
         color: $grey;
       }
     }
