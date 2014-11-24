@@ -13,6 +13,7 @@ namespace :site do
     sh "git commit -m 'build new release'"
     sh "git push origin pre-release"
     sh "git subtree push --prefix _site origin master"
+    sh "git checkout develop"
     puts "Deploying to github pages... END"
   end
 
