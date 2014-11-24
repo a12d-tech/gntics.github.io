@@ -67,5 +67,7 @@
     {% if page.include_js_file %}
       {{ page.include_js_file | javascript }}
     {% endif %}
+
+    {% include ga.html %}
   </body>
 </html>
