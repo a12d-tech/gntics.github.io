@@ -1,0 +1,11 @@
+<div ng-controller="AuthenticationController as auth">
+  <p ng-hide="auth.loggedIn">
+    <a ng-href="// auth.loginUrl //">Login</a>
+  </p>
+
+  <p ng-show="auth.loggedIn">
+    You are logged in buddy !
+
+    <a ng-click="auth.logout()">Logout</a>
+  </p>
+</div>
