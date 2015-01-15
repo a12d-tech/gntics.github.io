@@ -2,6 +2,27 @@
 
 body#fancy-resume
   background-color: $second-color
+
+  .white-popup
+    position: relative
+    background: $fourth-color
+    padding: 40px 40px 40px 10px
+    width: auto
+    max-width: 750px
+    margin: 20px auto
+
+  ul.experience-group
+    li.experience-item
+      h3
+        font-size: 1.15em
+        span
+          font-size: 0.85em
+          font-weight: $fweight-normal
+          a, a:visited
+            color: $brown-light
+      div.long-description
+        font-weight: $fweight-normal
+
   section#content
     padding-top: 120px
     padding-bottom: 120px
@@ -11,27 +32,42 @@ body#fancy-resume
       font-size: 2em
       font-weight: $fweight-normal
 
-    a#login-btn
-      border-color: $brown-light
-      color: $brown-light
+    .auth-white
+      a#login-btn
+        border-color: white
+        color: white
+    .auth-brown
+      a#login-btn
+        border-color: $brown-light
+        color: $brown-light
 
-    .button
-      border-color: $brown-light
-      color: $brown-light
+    .panel
+      @include border-radius(10px)
+      @include box-shadow()
+      overflow: hidden
+      background-color: white
+
+    .elt
+      padding: 20px 25px !important
+
+    .show-more
+      cursor: pointer !important
+      position: absolute !important
+      bottom: 20px
+      right: 20px
+      a
+        color: white
+        border-color: white
+
+    div#greetings
+      color: white
+
+    div#unauthorized
+      p
+        font-size: 2em
 
     div#welcome
-      div#menu > ul > li > a
-        margin-bottom: 5px
-        width: 207px
-
-      div#panel
-        @include border-radius(10px)
-        @include box-shadow()
-        overflow: hidden
-        background-color: white
-
-        .elt
-          padding: 20px 25px !important
+      div.panel
 
         #picture, #info
           height: 325px
@@ -100,6 +136,10 @@ body#fancy-resume
           & > *
             z-index: 1
             position: relative
+          .show-more
+            a
+              color: #393A3D
+              border-color: #393A3D
         #experiences:after
           content: ""
           background-image: url(asset_path("hdd.jpg"))
@@ -113,6 +153,35 @@ body#fancy-resume
           right: 0
           position: absolute
           z-index: 0
+        #experiences:hover:after
+          opacity: 0.2
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+          // .show-more > a
+          //   color: #393A3D
+          //   -webkit-transition: color 500ms ease
+          //   -moz-transition: color 500ms ease
+          //   -o-transition: color 500ms ease
+          //   transition: color 500ms ease
+          //   border-color: #393A3D
+          //   -webkit-transition: border-color 500ms ease
+          //   -moz-transition: border-color 500ms ease
+          //   -o-transition: border-color 500ms ease
+          //   transition: border-color 500ms ease
+
+        // ul.experience-group
+        //   li.experience-item
+        //     h3
+        //       font-size: 1.15em
+        //       span
+        //         font-size: 0.85em
+        //         font-weight: $fweight-normal
+        //         a, a:visited
+        //           color: $brown-light
+
+
 
         #skills, #education
           height: 275px

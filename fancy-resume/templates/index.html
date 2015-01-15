@@ -1,11 +1,13 @@
-<div ng-controller="AuthenticationController as auth">
-  <p ng-hide="auth.loggedIn">
-    <a ng-href="// auth.loginUrl //">Login</a>
-  </p>
+<div id="greetings" class="grid wrap">
+  <div class="unit whole">
+    <h1 class="align-center">
+      Hey, nice to see you here
+    </h1>
+  </div>
+</div>
 
-  <p ng-show="auth.loggedIn">
-    You are logged in buddy !
-
-    <a ng-click="auth.logout()">Logout</a>
-  </p>
+<div class="grid wrap">
+  <div class="unit whole align-center auth-white">
+    <ng-include src="'templates/auth.html'"></ng-include>
+  </div>
 </div>

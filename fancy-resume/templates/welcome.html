@@ -1,11 +1,10 @@
 <div id="welcome" class="grid wrap no-gutters">
-  <div id="panel" class="unit whole">
+  <div class="unit whole panel">
 
     <div class="grid wrap">
       <div id="picture" class="unit two-thirds align-center elt">
-        <!-- <ng-include src="'templates/menu.html'"></ng-include> -->
         <div class="profile-pic">
-          <img src="&amp;s=150" alt="Gntics picture">
+          <img src="{{ site.data.github.user.avatar_url }}&s=150" alt="Gntics picture">
         </div>
       </div>
       <div id="info" class="unit one-third elt">
@@ -33,28 +32,47 @@
     </div>
 
     <div class="grid wrap">
+
       <div id="experiences" class="unit three-fifths elt">
-        <h1><i class="fa fa-history"></i> Experiences</h1>
-        <ul>
-          <li>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</li>
-          <li>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</li>
-          <li>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</li>
-          <li>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</li>
-          <li>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</li>
+        <h1><i class="fa fa-history"></i> Professional experiences</h1>
+        <ul class="experience-group">
+          <li class="experience-item" ng-repeat="exp in userCtrl.experiences | orderBy:'-start_date'">
+            <ng-include src="'templates/experience-item.html'"></ng-include>
+          </li>
         </ul>
+        <div class="show-more">
+          <a href="#experiences-more" class="open-popup-link button button-border-primary button-rounded">
+            Read more
+          </a>
+        </div>
+        <div id="experiences-more" class="white-popup mfp-hide">
+          <ul class="experience-group">
+            <li class="experience-item" ng-repeat="exp in userCtrl.experiences | orderBy:'-start_date'">
+              <ng-include src="'templates/experience-item-details.html'"></ng-include>
+            </li>
+          </ul>
+        </div>
       </div>
+
       <div id="education-skills" class="unit two-fifths">
         <div class="grid wrap">
           <div id="skills" class="unit whole elt">
             <h1><i class="fa fa-terminal"></i> Skills</h1>
+            <div class="show-more">
+              <a class="button button-border-primary button-rounded">Read more</a>
+            </div>
           </div>
         </div>
         <div class="grid wrap">
           <div id="education" class="unit whole elt">
             <h1><i class="fa fa-graduation-cap"></i> Education</h1>
+            <div class="show-more">
+              <a class="button button-border-primary button-rounded">Read more</a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="grid wrap">
