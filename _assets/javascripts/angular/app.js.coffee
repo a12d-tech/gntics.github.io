@@ -7,15 +7,12 @@ app = angular.module('resume', [
   'authenticationModule'
   'initConfigModule'
   'userModule'
-  'usersModule'
+  'usersModule',
+  'ngSanitize'
 ])
 
 app.config ['$interpolateProvider', ($interpolateProvider)->
   $interpolateProvider.startSymbol('//').endSymbol('//')
-]
-
-app.config ['$httpProvider', ($httpProvider) ->
-  $httpProvider.interceptors.push('tokenInterceptor')
 ]
 
 app.factory 'tokenInterceptor', ['accessToken','initConfig', ( accessToken, initConfig) ->
@@ -25,28 +22,32 @@ app.factory 'tokenInterceptor', ['accessToken','initConfig', ( accessToken, init
       token = accessToken.get()
       config.headers['Authorization'] = "Bearer #{token}" if token
       config.headers['Accept'] = "application/json"
-      # config.headers['Access-Control-Allow-Credentials'] = true
+      config.headers['Access-Control-Allow-Credentials'] = true
       # it seems to be useless !! NTBChecked
       config.headers['Content-Type'] = "application/json; charset=utf-8"
     config
 ]
 
-# settings = {
-#   'host': "localhost:3000"
-# }
+app.factory 'unauthorizedInterceptor', [ '$q', '$injector', ($q, $injector) ->
+  response: (response) ->
+    console.log "Response 401"  if response.status is 401
+    response or $q.when(response)
 
-# setting = {
-#   'host': "localhost:3000",
-#   'clientId': YOUR_CLIENT_ID
-# }
+  responseError: (rejection) ->
+    if rejection.status is 401
+      console.log "Response Error 401"
+      $injector.get('$state').go('401')
+    $q.reject rejection
 
-# redirect_uri = window.location
+]
 
+app.config ['$httpProvider', ($httpProvider) ->
+  $httpProvider.interceptors.push('tokenInterceptor')
+  $httpProvider.interceptors.push('unauthorizedInterceptor')
+]
 
 # authHost = "http://" + setting.host
 # resourceHost = "https://api." + setting.host
-
-# endUserAuthorizationEndpoint = authHost + "/connect"
 
 # authHost = "https://" + setting.host
 # resourceHost = "https://api." + setting.host

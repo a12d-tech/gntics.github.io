@@ -1,9 +1,13 @@
 app = angular.module('userModule', [])
 
 app.service 'User', ['$http','initConfig', ($http, initConfig)->
-  urlRoot = "//#{ initConfig.host }/api/v1/users"
+  host     = "//#{ initConfig.host }"
+  api      = "/api/v1"
+  resource = "/users"
+  baseRoot = host + api
+  urlRoot  = host + api + resource
 
-  all:    -> $http.get(urlRoot)
-  me:     -> $http.get(urlRoot + '/me')
-  logout: -> $http.delete(urlRoot + '/logout')
+  me:     -> $http.get( urlRoot + '/me' )
+  current:-> $http.get( baseRoot + '/current' )
+  logout: -> $http.delete( baseRoot + '/logout' )
 ]
