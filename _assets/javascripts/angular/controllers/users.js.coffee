@@ -6,6 +6,7 @@ app.controller 'UserController', [ 'user', (user) ->
   @desc = user.description
   @experiences = user.experiences
   @educations = user.educations
+  @skills = user.skills
 
   $(".open-popup-link").magnificPopup
     type: "inline"
@@ -27,8 +28,6 @@ app.filter "formatDate", ($filter) ->
     return data  unless data
     start = data.split('-')
     end = comparedDate.split('-')
-    console.log start
-    console.log end
     if start[0] is end[0]
       return start[0]
     else

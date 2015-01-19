@@ -45,7 +45,7 @@
             Read more
           </a>
         </div>
-        <div id="experiences-more" class="white-popup mfp-hide">
+        <div id="experiences-more" class="white-popup timeline mfp-hide">
           <ul class="experience-group">
             <li class="experience-item" ng-repeat="exp in userCtrl.experiences | orderBy:'-start_date'">
               <ng-include src="'templates/experience-item-details.html'"></ng-include>
@@ -57,9 +57,21 @@
       <div id="education-skills" class="unit two-fifths">
         <div class="grid wrap">
           <div id="skills" class="unit whole elt">
-            <h1><i class="fa fa-terminal"></i> Skills</h1>
+            <h1><i class="fa fa-terminal"></i> Technical skills</h1>
+            <ul class="skill-group">
+              <li class="skill-item" ng-repeat="sk in userCtrl.skills | orderBy:'rank' | limitTo:8 ">
+                <a class="button button-border-primary button-rounded button-small">// sk.name //</a>
+              </li>
+            </ul>
             <div class="show-more">
-              <a class="button button-border-primary button-rounded">Read more</a>
+              <a href="#skills-more" class="open-popup-link button button-border-primary button-rounded">Read more</a>
+            </div>
+            <div id="skills-more" class="white-popup mfp-hide">
+              <ul class="skill-group">
+                <li class="skill-item" ng-repeat="sk in userCtrl.skills | orderBy:'rank'">
+                  <a class="button button-border-primary button-rounded button-small">// sk.name //</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -80,7 +92,7 @@
         <h1><i class="fa fa-bullhorn"></i> Languages</h1>
       </div>
       <div id="interests" class="unit two-thirds elt">
-        <h1><i class="fa fa-heart"></i> Interests</h1>
+        <h1><i class="fa fa-heart"></i> Personal Interests</h1>
       </div>
     </div>
 
