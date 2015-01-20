@@ -1,0 +1,33 @@
+<header id="header">
+  <div class="grid wrap">
+    <div class="unit whole">
+      <div id="logo" class="pull-left">
+        <a class="header-link" href="/">
+          <p>
+            {{ site.name }}
+          </p>
+        </a>
+      </div>
+
+      <div class="pull-right menu-icons-wrapper">
+        <ul class="menu-icons-container">
+          <li>
+            <a class="header-link" href="{{ site.url }}/blog/">
+              <i class="fa fa-code fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a class="header-link" href="{{ site.data.github.user.html_url }}" target="_blank">
+              <i class="fa fa-github fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a class="header-link" href="mailto:{{ site.data.user.mail }}">
+              <i class="fa fa-envelope fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

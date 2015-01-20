@@ -1,0 +1,350 @@
+@import "global"
+
+body#fancy-resume
+  background-color: $second-color
+
+  .white-popup
+    position: relative
+    background: $fourth-color
+    padding: 40px
+    width: auto
+    max-width: 750px
+    margin: 20px auto
+
+  .timeline
+    padding: 40px 40px 40px 10px !important
+
+  .button
+    font-family: $font-stack !important
+    font-weight: $fweight-normal !important
+
+  ul.experience-group
+    li.experience-item
+      h3
+        font-size: 1.15em
+        span
+          font-size: 0.85em
+          font-weight: $fweight-normal
+          a, a:visited
+            color: $brown-light
+      div.long-description
+        font-weight: $fweight-normal
+
+  ul.skill-group
+    li.skill-item
+      display: inline-block
+      margin: 2px 2px
+      a
+        border-color: #4F4E3F
+        color: #4F4E3F
+
+  ul.education-group
+    li.education-item
+      & > *
+        font-weight: $fweight-normal
+      a, a:visited
+        color: white
+        text-decoration: underline
+      div.long-description
+        a
+          color: $brown-light
+
+  section#content
+
+    h1
+      font-family: $font-stack
+      font-size: 2em
+      font-weight: $fweight-normal
+
+    .auth-white
+      a#login-btn
+        border-color: white
+        color: white
+    .auth-brown
+      a#login-btn
+        border-color: $brown-light
+        color: $brown-light
+
+    .panel
+      @include border-radius(10px)
+      @include box-shadow()
+      overflow: hidden
+      background-color: white
+
+    .elt
+      padding: 20px 25px !important
+
+    .show-more
+      cursor: pointer !important
+      position: absolute !important
+      bottom: 20px
+      right: 20px
+      a
+        color: white
+        border-color: white
+
+    div#greetings
+      padding-top: 120px
+      color: white
+
+    div#unauthorized
+      p
+        font-size: 2em
+
+    div#user-greetings
+      padding-top: 30px
+      color: white
+      h1
+        margin-bottom: 0px
+
+    div#thanks
+      padding-bottom: 30px
+      color: white
+      p > i
+        color: rgb(253, 70, 70)
+
+    div#welcome
+      padding-top: 30px
+      padding-bottom: 30px
+
+      div.panel
+
+        #picture, #info
+          height: 325px
+        #picture
+          .profile-pic
+            margin-top: 4em
+          // gradient bleu begin
+          // background: linear-gradient(319deg, #1aab86, #341aab)
+          // background-size: 400% 400%
+          // -webkit-animation: blueGradient 16s ease infinite
+          // -moz-animation: blueGradient 16s ease infinite
+          // animation: blueGradient 16s ease infinite
+          // gradient bleu end
+
+          background-image: url(asset_path("batman-tiny.png"))
+          background-color: rgba(242, 255, 0, 0.62)
+          background-size: 80px
+          background-position: center center
+          background-repeat: repeat-x
+
+        //   background: linear-gradient(144deg, #f2ff00, #494753)
+        //   background-size: 400% 400%
+        //   -webkit-animation: blueGradient 16s ease infinite
+        //   -moz-animation: blueGradient 16s ease infinite
+        //   animation: blueGradient 16s ease infinite
+        //
+        //   display: block
+        //   position: relative
+        // #picture:after
+        //   content: ""
+        //   background-image: url(asset_path("batman-tiny.png"))
+        //   background-position: center center
+        //   background-repeat: repeat-x
+        //   background-size: 80px
+        //   opacity: 0.6
+        //   top: 0
+        //   left: 0
+        //   bottom: 0
+        //   right: 0
+        //   position: absolute
+        //   z-index: 0
+
+        #info
+          background-color: $fourth-color
+          h1
+            margin-bottom: 5px
+            &#title
+              font-weight: $fweight-heavy
+            a, a:visited
+              color: $brown-light
+              margin-right: 8px
+          p
+            font-size: 1.8em
+          ul#multi-devices
+            margin-top: 70px
+            list-style-type: none
+            li
+              display: inline-block
+
+        #experiences, #education-skills
+          height: 550px
+        #experiences
+          color: #393A3D
+          display: block
+          position: relative
+          & > *
+            z-index: 1
+            position: relative
+          .show-more
+            a
+              color: #393A3D
+              border-color: #393A3D
+        #experiences:after
+          content: ""
+          background-image: url(asset_path("hdd.png"))
+          // background-position: center center
+          background-repeat: no-repeat
+          background-size: cover
+          opacity: 0.5
+          top: 0
+          left: 0
+          bottom: 0
+          right: 0
+          position: absolute
+          z-index: 0
+        #experiences:hover:after
+          opacity: 0.2
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+          // .show-more > a
+          //   color: #393A3D
+          //   -webkit-transition: color 500ms ease
+          //   -moz-transition: color 500ms ease
+          //   -o-transition: color 500ms ease
+          //   transition: color 500ms ease
+          //   border-color: #393A3D
+          //   -webkit-transition: border-color 500ms ease
+          //   -moz-transition: border-color 500ms ease
+          //   -o-transition: border-color 500ms ease
+          //   transition: border-color 500ms ease
+
+        // ul.experience-group
+        //   li.experience-item
+        //     h3
+        //       font-size: 1.15em
+        //       span
+        //         font-size: 0.85em
+        //         font-weight: $fweight-normal
+        //         a, a:visited
+        //           color: $brown-light
+
+
+
+        #skills, #education
+          height: 275px
+        #skills
+          color: #4F4E3F
+          display: block
+          position: relative
+          & > *
+            z-index: 1
+            position: relative
+        #skills:after
+          content: ""
+          background-image: url(asset_path("field.png"))
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: cover
+          opacity: 0.8
+          top: 0
+          left: 0
+          bottom: 0
+          right: -1px
+          position: absolute
+          z-index: 0
+        #skills:hover:after
+          opacity: 0.5
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+
+        #education
+          color: #ecf0f1
+          display: block
+          position: relative
+          & > *
+            z-index: 1
+            position: relative
+        #education:after
+          content: ""
+          background-image: url(asset_path("night.png"))
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: cover
+          opacity: 0.7
+          top: 0
+          left: 0
+          bottom: 0
+          right: -1px
+          position: absolute
+          z-index: 0
+
+        #languages, #interests
+          height: 250px
+        #languages
+          color: $fourth-color
+          display: block
+          position: relative
+          & > *
+            z-index: 1
+            position: relative
+        #languages:after
+          content: ""
+          background-image: url(asset_path("startup.png"))
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: cover
+          opacity: 0.7
+          top: 0
+          left: 0
+          bottom: 0
+          right: -1px
+          position: absolute
+          z-index: 0
+        #languages:hover:after
+          opacity: 0.3
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+          // color: $brown-light
+          // -webkit-transition: color 500ms ease
+          // -moz-transition: color 500ms ease
+          // -o-transition: color 500ms ease
+          // transition: color 500ms ease
+        ul.languages-group
+          li.languages-item
+            font-size: 1.2em
+            color: #393B3E
+            div.lang-name
+              font-weight: $fweight-heavy
+            div.lang-level
+              font-weight: $fweight-normal
+
+        #interests
+          color: #393B3E
+          display: block
+          position: relative
+          & > *
+            z-index: 1
+            position: relative
+        #interests:after
+          content: ""
+          background-image: url(asset_path("wood.png"))
+          background-position: center center
+          background-repeat: no-repeat
+          background-size: cover
+          opacity: 0.6
+          top: 0
+          left: 0
+          bottom: 0
+          right: -1px
+          position: absolute
+          z-index: 0
+        #interests:hover:after
+          opacity: 0.5
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+        ul.interests-group
+          li.interests-item
+            font-size: 1.2em
+            div.int-type
+              font-weight: $fweight-heavy
+            div.int-list
+              font-weight: $fweight-normal

@@ -28,7 +28,7 @@ $ ->
           displayCmdNotFound(cmd)
 
     el.value = ""
-    $('#console-typing').scrollTop($('#console-typing').height());
+    $('#console-typing').scrollTop($('#text-wrapper').height())
     return
 
   displayBlankLine = ->

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'github-pages' #is linked to jekyll gem
-gem 'guard-jekyll'
+# gem 'guard-jekyll' removed
 gem 'jekyll-assets'
 gem 'uglifier'
 gem 'sass'
