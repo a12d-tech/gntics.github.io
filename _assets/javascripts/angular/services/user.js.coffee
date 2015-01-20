@@ -1,7 +1,7 @@
 app = angular.module('userModule', [])
 
 app.service 'User', ['$http','initConfig', ($http, initConfig)->
-  host     = "//#{ initConfig.host }"
+  host     = "#{ initConfig.host }"
   api      = "/api/v1"
   resource = "/users"
   baseRoot = host + api
