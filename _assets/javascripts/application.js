@@ -13,7 +13,6 @@
 //= require 'angular/services/access-token'
 //= require 'angular/services/init-config'
 //= require 'angular/services/user'
-//= require 'angular/controllers/main'
 //= require 'angular/controllers/authentication'
 //= require 'angular/controllers/users'
 

@@ -7,12 +7,6 @@ app.controller 'AuthenticationController', [ '$state', 'accessToken', 'initConfi
   @setLoggedIn = (isLoggedIn) ->
     @loggedIn = !!isLoggedIn
 
-  # @logout = ->
-  #   User.logout().then ->
-  #     accessToken.delete()
-  #     @setLoggedIn false
-  #     $state.go 'index'
-
   @setLoggedIn accessToken.get()
 
 ]

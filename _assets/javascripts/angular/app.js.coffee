@@ -1,5 +1,4 @@
 app = angular.module('resume', [
-  'mainModule'
   'accessTokenModule'
   'ngStorage'
   'ui.router'
@@ -7,7 +6,7 @@ app = angular.module('resume', [
   'authenticationModule'
   'initConfigModule'
   'userModule'
-  'usersModule',
+  'usersModule'
   'ngSanitize'
 ])
 
@@ -45,9 +44,3 @@ app.config ['$httpProvider', ($httpProvider) ->
   $httpProvider.interceptors.push('tokenInterceptor')
   $httpProvider.interceptors.push('unauthorizedInterceptor')
 ]
-
-# authHost = "http://" + setting.host
-# resourceHost = "https://api." + setting.host
-
-# authHost = "https://" + setting.host
-# resourceHost = "https://api." + setting.host
