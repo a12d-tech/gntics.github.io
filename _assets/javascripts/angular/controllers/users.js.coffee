@@ -7,6 +7,8 @@ app.controller 'UserController', [ 'user', (user) ->
   @experiences = user.experiences
   @educations = user.educations
   @skills = user.skills
+  @languages = user.languages
+  @interests = user.interests
 
   $(".open-popup-link").magnificPopup
     type: "inline"

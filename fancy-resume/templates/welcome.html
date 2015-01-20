@@ -8,7 +8,7 @@
         </div>
       </div>
       <div id="info" class="unit one-third elt">
-        <h1>Gntics
+        <h1>// userCtrl.name //
           <a class="pull-right" href="mailto:{{ site.data.user.mail }}">
             <i class="fa fa-envelope"></i>
           </a>
@@ -18,8 +18,7 @@
         </h1>
         <h1 id="title">Software engineer</h1>
         <p class="align-center">
-          I create web, mobile apps
-          and other stuff
+          // userCtrl.desc //
         </p>
         <ul id="multi-devices" class="grid wrap align-center">
           <li class="unit one-fifth">-----</li>
@@ -102,9 +101,19 @@
     <div class="grid wrap">
       <div id="languages" class="unit one-third elt">
         <h1><i class="fa fa-bullhorn"></i> Languages</h1>
+        <ul class="languages-group">
+          <li class="languages-item" ng-repeat="lang in userCtrl.languages | orderBy:'created_at'">
+            <ng-include src="'templates/language-item.html'"></ng-include>
+          </li>
+        </ul>
       </div>
       <div id="interests" class="unit two-thirds elt">
         <h1><i class="fa fa-heart"></i> Personal Interests</h1>
+        <ul class="interests-group">
+          <li class="interests-item" ng-repeat="int in userCtrl.interests | orderBy:'-type'">
+            <ng-include src="'templates/interest-item.html'"></ng-include>
+          </li>
+        </ul>
       </div>
     </div>
 

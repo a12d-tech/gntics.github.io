@@ -281,6 +281,25 @@ body#fancy-resume
           right: -1px
           position: absolute
           z-index: 0
+        #languages:hover:after
+          opacity: 0.3
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+          // color: $brown-light
+          // -webkit-transition: color 500ms ease
+          // -moz-transition: color 500ms ease
+          // -o-transition: color 500ms ease
+          // transition: color 500ms ease
+        ul.languages-group
+          li.languages-item
+            font-size: 1.2em
+            color: #393B3E
+            div.lang-name
+              font-weight: $fweight-heavy
+            div.lang-level
+              font-weight: $fweight-normal
 
         #interests
           color: #393B3E
@@ -302,3 +321,16 @@ body#fancy-resume
           right: -1px
           position: absolute
           z-index: 0
+        #interests:hover:after
+          opacity: 0.5
+          -webkit-transition: opacity 500ms ease
+          -moz-transition: opacity 500ms ease
+          -o-transition: opacity 500ms ease
+          transition: opacity 500ms ease
+        ul.interests-group
+          li.interests-item
+            font-size: 1.2em
+            div.int-type
+              font-weight: $fweight-heavy
+            div.int-list
+              font-weight: $fweight-normal
