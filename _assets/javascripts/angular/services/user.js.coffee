@@ -9,5 +9,5 @@ app.service 'User', ['$http','initConfig', ($http, initConfig)->
 
   me:     -> $http.get( urlRoot + '/me' )
   current:-> $http.get( baseRoot + '/current' )
-  logout: -> $http.delete( baseRoot + '/logout' )
+  # logout: -> $http.delete( baseRoot + '/logout' )
 ]

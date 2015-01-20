@@ -1,6 +1,6 @@
 app = angular.module('usersModule', [])
 
-app.controller 'UserController', [ 'user', (user) ->
+app.controller 'UserController', [ 'user', 'User', (user, User) ->
 
   @name = user.name
   @desc = user.description
@@ -9,6 +9,15 @@ app.controller 'UserController', [ 'user', (user) ->
   @skills = user.skills
   @languages = user.languages
   @interests = user.interests
+
+  ctrlScope = this
+  ctrlScope.currentUser = null
+
+  @getUserInfo = ->
+    User.current().then (response) ->
+      ctrlScope.currentUser = response.data
+
+  @getUserInfo()
 
   $(".open-popup-link").magnificPopup
     type: "inline"
