@@ -1,0 +1,139 @@
+<div id="user-greetings" class="grid wrap">
+  <div class="unit whole align-center">
+    <h1>Hi // userCtrl.currentUser.name //,</h1>
+    <h3>You successfully logged in <i class="fa fa-thumbs-o-up fa-2x"></i></h3>
+    <p>
+      You have a 3 hour access to enjoy this page, then you will be asked to re-login
+    </p>
+  </div>
+</div>
+
+<div id="welcome" class="grid wrap no-gutters">
+  <div class="unit whole panel">
+
+    <div class="grid wrap">
+      <div id="picture" class="unit two-thirds align-center elt">
+        <div class="profile-pic">
+          <img src="{{ site.data.github.user.avatar_url }}&s=150" alt="Gntics picture">
+        </div>
+      </div>
+      <div id="info" class="unit one-third elt">
+        <h1>// userCtrl.name //
+          <a class="pull-right" href="mailto:{{ site.data.user.mail }}">
+            <i class="fa fa-envelope"></i>
+          </a>
+          <a class="pull-right" href="{{ site.data.github.user.html_url }}" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        </h1>
+        <h1 id="title">Software engineer</h1>
+        <p class="align-center">
+          // userCtrl.desc //
+        </p>
+        <ul id="multi-devices" class="grid wrap align-center">
+          <li class="unit one-fifth">-----</li>
+          <li class="unit one-fifth"><i class="fa fa-laptop fa-2x"></i></li>
+          <li class="unit one-fifth"><i class="fa fa-tablet fa-2x"></i></li>
+          <li class="unit one-fifth"><i class="fa fa-mobile fa-2x"></i></li>
+          <li class="unit one-fifth">-----</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid wrap">
+
+      <div id="experiences" class="unit three-fifths elt">
+        <h1><i class="fa fa-history"></i> Professional experiences</h1>
+        <ul class="experience-group">
+          <li class="experience-item" ng-repeat="exp in userCtrl.experiences | orderBy:'-start_date'">
+            <ng-include src="'templates/experience-item.html'"></ng-include>
+          </li>
+        </ul>
+        <div class="show-more">
+          <a href="#experiences-more" class="open-popup-link button button-border-primary button-rounded">
+            Read more
+          </a>
+        </div>
+        <div id="experiences-more" class="white-popup timeline mfp-hide">
+          <ul class="experience-group">
+            <li class="experience-item" ng-repeat="exp in userCtrl.experiences | orderBy:'-start_date'">
+              <ng-include src="'templates/experience-item-details.html'"></ng-include>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="education-skills" class="unit two-fifths">
+        <div class="grid wrap">
+          <div id="skills" class="unit whole elt">
+            <h1><i class="fa fa-terminal"></i> Technical skills</h1>
+            <ul class="skill-group">
+              <li class="skill-item" ng-repeat="sk in userCtrl.skills | orderBy:'rank' | limitTo:8 ">
+                <a class="button button-border-primary button-rounded button-small">// sk.name //</a>
+              </li>
+            </ul>
+            <div class="show-more">
+              <a href="#skills-more" class="open-popup-link button button-border-primary button-rounded">Read more</a>
+            </div>
+            <div id="skills-more" class="white-popup mfp-hide">
+              <ul class="skill-group">
+                <li class="skill-item" ng-repeat="sk in userCtrl.skills | orderBy:'rank'">
+                  <a class="button button-border-primary button-rounded button-small">// sk.name //</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="grid wrap">
+          <div id="education" class="unit whole elt">
+            <h1><i class="fa fa-graduation-cap"></i> Education</h1>
+            <ul class="education-group">
+              <li class="education-item" ng-repeat="educ in userCtrl.educations | orderBy:'-start_date' | limitTo:1 ">
+                <span ng-bind-html='educ.description'></span>
+              </li>
+            </ul>
+            <div class="show-more">
+              <a href="#education-more" class="open-popup-link button button-border-primary button-rounded">Read more</a>
+            </div>
+            <div id="education-more" class="white-popup timeline mfp-hide">
+              <ul class="education-group">
+                <li class="education-item" ng-repeat="educ in userCtrl.educations | orderBy:'-start_date'">
+                  <ng-include src="'templates/education-item-details.html'"></ng-include>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="grid wrap">
+      <div id="languages" class="unit one-third elt">
+        <h1><i class="fa fa-bullhorn"></i> Languages</h1>
+        <ul class="languages-group">
+          <li class="languages-item" ng-repeat="lang in userCtrl.languages | orderBy:'created_at'">
+            <ng-include src="'templates/language-item.html'"></ng-include>
+          </li>
+        </ul>
+      </div>
+      <div id="interests" class="unit two-thirds elt">
+        <h1><i class="fa fa-heart"></i> Personal Interests</h1>
+        <ul class="interests-group">
+          <li class="interests-item" ng-repeat="int in userCtrl.interests | orderBy:'-type'">
+            <ng-include src="'templates/interest-item.html'"></ng-include>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="thanks" class="grid wrap">
+  <div class="unit whole align-center">
+    <p>
+      Made with <i class="fa fa-heart"></i> for your eyes
+    </p>
+  </div>
+</div>
