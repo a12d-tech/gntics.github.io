@@ -78,8 +78,20 @@
         <div class="grid wrap">
           <div id="education" class="unit whole elt">
             <h1><i class="fa fa-graduation-cap"></i> Education</h1>
+            <ul class="education-group">
+              <li class="education-item" ng-repeat="educ in userCtrl.educations | orderBy:'-start_date' | limitTo:1 ">
+                <span ng-bind-html='educ.description'></span>
+              </li>
+            </ul>
             <div class="show-more">
-              <a class="button button-border-primary button-rounded">Read more</a>
+              <a href="#education-more" class="open-popup-link button button-border-primary button-rounded">Read more</a>
+            </div>
+            <div id="education-more" class="white-popup timeline mfp-hide">
+              <ul class="education-group">
+                <li class="education-item" ng-repeat="educ in userCtrl.educations | orderBy:'-start_date'">
+                  <ng-include src="'templates/education-item-details.html'"></ng-include>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
