@@ -17,7 +17,7 @@ app.config ['$interpolateProvider', ($interpolateProvider)->
 app.factory 'tokenInterceptor', ['accessToken','initConfig', ( accessToken, initConfig) ->
   request: (config) ->
     # intercept request and set token in request headers
-    if config.url.indexOf("//#{ initConfig.host }") == 0
+    if config.url.indexOf("#{ initConfig.host }") == 0
       token = accessToken.get()
       config.headers['Authorization'] = "Bearer #{token}" if token
       config.headers['Accept'] = "application/json"
